@@ -23,7 +23,7 @@ global.APIs = {
 global.APIKeys = {
 	'https://api.zeks.me/api': 'Nyarlathotep',
 	'https://hardianto.xyz/api': 'hardianto',
-	'https://melcanz.com: 'GVQjlc7H'
+	
 }
 
 let file = require.resolve(__filename)

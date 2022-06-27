@@ -7,7 +7,7 @@ const { useSingleFileAuthState } = require('@adiwajshing/baileys-md')
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 
-let authFile = './adii.json'
+let authFile = 'session.json'
 const { state, saveState } = useSingleFileAuthState(authFile)
 
 async function start() {
